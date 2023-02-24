@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0;
+        border: 0;
+        padding: 0;
+      }
+      #title {
+        font-size: 5vh;
+        position: absolute;
+        top: 10vh;
+        text-align: center;
+        margin: auto;
+        width: 100%;
+      }
+      #list {
+        width: 50vw;
+        height: 150vh;
+        border-style: solid;
+        border-width: 0.5vw;
+        position: absolute;
+        top: 20vh;
+        left: 25vw;
+      }
+      #armor,
+      #attack,
+      #rate,
+      #move {
+        font-size: 4vh;
+        font-weight: bold;
+      }
+      #armorDesc,
+      #attackDesc,
+      #rateDesc,
+      #moveDesc {
+        font-size: 3vh;
+      }
+      #armorStats,
+      #attackStats,
+      #rateStats,
+      #moveStats {
+        font-size: 3vh;
+        font-weight: bold;
+      }
+      #cash {
+        font-size: 4vh;
+        font-weight: bold;
+        position: absolute;
+        right: 2vh;
+      }
+      #armorUp, #attackUp, #moveUp, #rateUp {
+        font-size: 3vh;
+      }
+      #message {
+        position: static;
+        visibility: hidden;
+        font-size: 3vh;
+      }
+    </style>
+    <script src="mechanics.js"></script>
+    <script></script>
+  </head>
+  <body>
+    <p id="title">Upgrades</p>
+    <p id="cash">Money: $0</p>
+    <div id="message">
+      <p id="error">Can't Upgrade!</p>
+      <p id="desc">Not enough money.</p>
+    </div>
+    <div id="list">
+      <p id="armor">Armor</p>
+      <p id="armorDesc">Armor shields you from a certain amount of damage.</p>
+      <p id="armorStats">Armor Protection: 0</p>
+      <button onclick="armorUp()" id="armorUp">Upgrade: $20</button>
+      <p id="attack">Damage</p>
+      <p id="attackDesc">
+        The amount of damage your weapon inflicts on the enemy.
+      </p>
+      <p id="attackStats">Attack: 5</p>
+      <button onclick="attackUp()" id="attackUp">Upgrade: $10</button>
+      <p id="rate">Firing Rate</p>
+      <p id="rateDesc">How fast your weapon discharges ammunition.</p>
+      <p id="rateStats">Rate: 2</p>
+      <button onclick="rateUp()" id="rateUp">Upgrade: $10</button>
+      <p id="move">Movement Speed</p>
+      <p id="moveDesc">How fast you move on the battlefield.</p>
+      <p id="moveStats">Movement Speed: 1</p>
+      <button onclick="moveUp()" id="moveUp">Upgrade: $5</button>
+    </div>
+  </body>
+</html>

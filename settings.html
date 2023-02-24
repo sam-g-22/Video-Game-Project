@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0;
+        border: 0;
+        padding: 0;
+      }
+      #header {
+        font-size: 5vh;
+        position: absolute;
+        top: 15vh;
+        text-align: center;
+        margin: auto;
+        width: 100%;
+      }
+      #options {
+        width: 50vw;
+        height: 50vh;
+        border-style: solid;
+        border-width: 0.5vw;
+        position: absolute;
+        top: 25vh;
+        left: 25vw;
+        font-weight: bold;
+        font-size: 3vh;
+      }
+      #four {
+        width: 20vw;
+        height: 5vh;
+        position: absolute;
+        bottom: 5vh;
+        left: 15vw;
+      }
+    </style>
+    <script src="mechanics.js"></script>
+    <script>
+        function toHome() {
+            location.href = "index.html"
+        }
+    </script>
+  </head>
+  <body>
+    <p id="header">Settings</p>
+    <div id="options">
+        <p id="controls">Movement Keys</p>
+        <button onclick="changeMovement()" id="one">WASD</button>
+        <p id="music">Music</p>
+        <button onclick="changeMusic()" id="two">ON</button>
+        <p id="sound">Sound Effects</p>
+        <button onclick="changeSounds()" id="three">ON</button>
+        <button onclick="toHome()" id="four">Back to Homepage</button>
+    </div>
+  </body>
+</html>
